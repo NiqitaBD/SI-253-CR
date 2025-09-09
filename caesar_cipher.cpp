@@ -24,7 +24,7 @@ string preprocessText(const string& text) {
         if (isalpha(c)) {
             result += toupper(c);
         } else if (c == ' ') {
-            result += ' '; // păstrăm spațiile
+            continue;
         } else {
             cout << "Caractere permise: doar A-Z, a-z si spatii.\n";
             return "";
@@ -159,8 +159,8 @@ int main() {
             cout << "Exit";
             return 0;
         } else { 
-            cout << "Valoare invalida, revenire la start\n";
-            continue;
+            cout << "Valoare invalida";
+            return 0;
         }
     }
     
